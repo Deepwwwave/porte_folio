@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 
 export default function Header() {
   return (
-    <header className={`${styles.header_layout} lg:w-1/5`}>
+    <header className={`${styles.header_layout} lg:ml-20px`}>
       <img className={styles.header_photo} src="images/photo.png" alt="photo" />
         <Navbar/>
     </header>

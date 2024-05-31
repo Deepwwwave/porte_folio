@@ -6,27 +6,27 @@ import LoadingCircle from "./ui/loading-circle";
 
 function Projects() {
    const { data, loading, error } = useFetchData("/projects.json"); // Assurez-vous que le chemin est correct
-//    const [showLoading, setShowLoading] = useState(true);
-//    const animationDuration = 500; // Durée de l'animation en millisecondes
+   const [showLoading, setShowLoading] = useState(true);
+   const animationDuration = 1200; // Durée de l'animation en millisecondes
 
-//    useEffect(() => {
-//       if (!loading) {
-//         // Set a timeout to wait for the LoadingCircle animation to complete
-//         const timer = setTimeout(() => {
-//           setShowLoading(false);
-//         }, animationDuration);
+   useEffect(() => {
+      if (!loading) {
+        // Set a timeout to wait for the LoadingCircle animation to complete
+        const timer = setTimeout(() => {
+          setShowLoading(false);
+        }, animationDuration);
   
-//         return () => clearTimeout(timer); // Cleanup the timer on unmount
-//       }
-//     }, [loading]);
+        return () => clearTimeout(timer); // Cleanup the timer on unmount
+      }
+    }, [loading]);
 
    
-   // if (loading || showLoading) {
-   //    return <LoadingCircle/>;
-   // }
-   if (loading ) {
-      return <>Loading...</>;
+   if (loading || showLoading) {
+      return <LoadingCircle/>;
    }
+   // if (loading ) {
+   //    return <>Loading...</>;
+   // }
 
    if (error) {
       return <div>Error: {error.message}</div>;

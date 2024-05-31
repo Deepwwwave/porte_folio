@@ -7,8 +7,9 @@
 @media (min-width: 1024px) { 
   .app_layout {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     padding-left: 50px;
     background-color: #2B2B2B;
+    padding-left: 70px;
   }
  }

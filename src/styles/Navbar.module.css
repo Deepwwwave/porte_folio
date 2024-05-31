@@ -1,0 +1,40 @@
+.navbar_linksLayout {
+   margin:30px 0px 0px 0px;
+   display: flex;
+   justify-content: space-between;
+   padding: 0px;
+   width: content;
+}
+
+.navbar_link {
+   background-color: #2B2B2B;
+   color:#FFFFFF;
+   padding: 5px;
+   margin: 5px;
+   border-radius:25px;
+   cursor: pointer;
+   width:90px;
+   text-align: center;
+   cursor: pointer;
+   border:solid rgba(255, 255, 255, 0.2) 1px;
+   transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, border 0.4s ease;
+}
+
+.navbar_linkActivated {
+   background-color:rgba(255, 255, 255, 0.2);
+   color: #FFFFFF;
+   border:#CDDC39 1px solid;
+   padding: 5px;
+   margin: 5px;
+   border-radius:25px;
+   cursor: pointer;
+   width:90px;
+   text-align: center;
+   cursor: pointer;
+   transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, border 0.4s ease;
+}
+
+
+
+
+

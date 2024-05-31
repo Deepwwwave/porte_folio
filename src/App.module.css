@@ -1,0 +1,11 @@
+.app_layout {
+  margin: 0px;
+}
+
+
+
+@media (min-width: 1024px) { 
+  .app_layout {
+    display: flex;
+  }
+ }

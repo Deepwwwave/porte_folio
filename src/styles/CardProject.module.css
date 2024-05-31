@@ -1,0 +1,61 @@
+.cardProject_layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: #232325;
+    margin: 5px 0px 5px 0px;
+    padding-bottom: 20px;
+ }
+ 
+ .cardProject_button {
+   margin-top: 1rem;
+   background-color: #2b2b2b;
+   color: #ffffff;
+   border-radius: 25px;
+   cursor: pointer;
+   width: 70px;
+   text-align: center;
+   cursor: pointer;
+   border: solid rgba(255, 255, 255, 0.2) 1px;
+   transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease, border 0.4s ease;
+   align-self: center;
+ }
+
+ .cardProject_thumbnail {
+  width: 50px;
+}
+ 
+ .cardProject_buttonClicked {
+  
+  color:  #ffffff;
+  border:#CDDC39 1px solid
+ }
+
+ .cardProject_buttonClose {
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  border: 1px solid #FFFFFF;
+  
+}
+.cardProject_buttonClose:hover {
+  opacity: 1;
+}
+.cardProject_buttonClose:before, .cardProject_buttonClose:after {
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+@media (min-width: 1024px) { 
+  .cardProject_layout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+ }
+
+
+ 

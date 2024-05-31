@@ -1,0 +1,6 @@
+.projects_layout {
+   background-color: #2b2b2b;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+}

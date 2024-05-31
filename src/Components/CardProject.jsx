@@ -25,25 +25,27 @@ const CardProject = ({ project }) => {
    });
 
    return (
-      <div className={styles.cardProject_layout}>
-         <h2 className="text-center mb-2 mt-2 uppercase">{project.name}</h2>
+      <section className={`lg:w-5/6 lg:p-0 ${styles.cardProject_layout}`}>
+         <span className="lg:w-32 lg:ml-8">
+            <h2 className="text-center mb-2 mt-2 uppercase">{project.name}</h2>
+         </span>
          <img src={`images/${project.thumbnail}`} alt={project.name} className={`lg:w-2/4 rounded my-5`} />
          <button
-            className={buttonClasse}
+            className={`${buttonClasse} lg:mr-8`}
             onClick={() => {
                handleToggleDetails(), handleIsButtonClicked();
             }}
          >
             Détails
          </button>
-         <animated.div style={infoAnimation}>
-            <AnimatePresence>
-               {toggleDetails && (
+         <AnimatePresence>
+            {toggleDetails && (
+               <animated.div style={infoAnimation}>
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                     <>
-                        <p className="ml-9 mt-5 italic mr-9 text-wrap">{project.summary}</p>
-                        <p className="ml-9 mt-5 underline">Stack:</p>
-                        <ul className="flex justify-start gap-4 flex-wrap px-9 pb-9 pt-4">
+                     <article className="lg:ml-28 lg:text-start pr-20 pl-9 lg:pl-16 ">
+                        <p className=" mt-5 italic text-wrap">{project.summary}</p>
+                        <p className=" mt-5 underline">Stack:</p>
+                        <ul className="flex justify-start gap-4 flex-wrap pb-9 pt-4">
                            {project.technologies.map((tech) => (
                               <li key={tech.name} className="flex flex-col items-center">
                                  <img src={`images/${tech.image}`} alt={tech.name} className="w-10" />
@@ -53,9 +55,9 @@ const CardProject = ({ project }) => {
                         </ul>
                         {project.description.Front && (
                            <div>
-                              <h3 className="ml-9 underline">Front-end:</h3>
+                              <h3 className=" underline">Front-end:</h3>
                               {project.description.Front.map((detail) => (
-                                 <p className="ml-9 mr-9 text-wrap" key={detail.title}>
+                                 <p className=" text-wrap" key={detail.title}>
                                     <strong>{detail.title}: </strong> {detail.value}
                                  </p>
                               ))}
@@ -63,9 +65,9 @@ const CardProject = ({ project }) => {
                         )}
                         {project.description.Back && (
                            <div>
-                              <h3 className="ml-9 mt-9 underline">Back-end:</h3>
+                              <h3 className=" mt-9 underline">Back-end:</h3>
                               {project.description.Back.map((detail) => (
-                                 <p className="ml-9 mr-9 text-wrap" key={detail.title}>
+                                 <p className="  text-wrap" key={detail.title}>
                                     <strong>{detail.title}: </strong> {detail.value}
                                  </p>
                               ))}
@@ -73,28 +75,28 @@ const CardProject = ({ project }) => {
                         )}
                         {project.description["API Request"] && (
                            <div>
-                              <h3 className="ml-9 mt-9 underline">API Request:</h3>
+                              <h3 className="mt-9 underline">API Request:</h3>
                               {project.description["API Request"].map((detail) => (
-                                 <p className="ml-9 text-wrap" key={detail.title}>
+                                 <p className=" text-wrap" key={detail.title}>
                                     <strong>{detail.title}: </strong> {detail.value}
                                  </p>
                               ))}
                            </div>
                         )}
                         <button
-                           className={` ${styles.cardProject_buttonClose} rounded-md text-base ml-9 mt-9`}
+                           className={` ${styles.cardProject_buttonClose} rounded-3xl text-base  mt-9 lg:mb-4`}
                            onClick={() => {
                               handleToggleDetails(), handleIsButtonClicked();
                            }}
                         >
                            X
                         </button>
-                     </>
+                     </article>
                   </motion.div>
-               )}
-            </AnimatePresence>
-         </animated.div>
-      </div>
+               </animated.div>
+            )}
+         </AnimatePresence>
+      </section>
    );
 };
 

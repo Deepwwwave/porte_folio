@@ -1,4 +1,6 @@
-.me_layout {
-    display: display;
-    background-color: #2B2B2B;
+@media (min-width: 1024px) { 
+  .projects_layout {
+    padding-top:150px;
+    margin-left: 50px;
   }
+ }

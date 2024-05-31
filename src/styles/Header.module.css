@@ -24,6 +24,20 @@
 }
 
 @media (min-width: 1024px) { 
-  
+  .header_photo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .header_layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top:25px;
+    padding-bottom: 20px;
+    background-color: #2B2B2B;
+  }
 }
 

@@ -1,0 +1,38 @@
+/* src/LoadingCircle.css */
+.loadingCircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    background-color: #2B2B2B;
+}
+
+.circle {
+   width: 100px;
+   height: 100px;
+}
+
+.circleBg {
+   fill: none;
+   stroke: #e6e6e6;
+   stroke-width: 3.8;
+}
+
+.circleProgress {
+   fill: none;
+   stroke: #CDDC39;
+   stroke-width: 3.8;
+   stroke-linecap: round;
+   stroke-dasharray: 0, 100;
+   animation: progress 0.5s linear forwards;
+}
+
+@keyframes progress {
+   to {
+      stroke-dasharray: 100, 100;
+   }
+}

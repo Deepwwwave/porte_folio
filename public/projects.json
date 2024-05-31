@@ -112,7 +112,7 @@
             },
             {
                "name": "Material CSS",
-               "image": "html-logo.png"
+               "image": "material-logo.png"
             }
          ],
          "summary": "Dashbord pour e-commerce.",
@@ -200,8 +200,8 @@
                "image": "html-logo.png"
             },
             {
-               "name": "CSS",
-               "image": "css-logo.png"
+               "name": "Material CSS",
+               "image": "material-logo.png"
             }
          ],
          "summary": "Boîte à outils.",

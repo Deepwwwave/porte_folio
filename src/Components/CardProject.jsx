@@ -4,16 +4,18 @@ import classNames from "classnames";
 import { useSpring, animated } from "react-spring";
 import { motion, AnimatePresence } from "framer-motion";
 
-const CardProject = ({ project }) => {
+const CardProject = ({ project, bgColor, bgImageColor }) => {
    const [toggleDetails, setToggleDetails] = useState(false);
    const [isButtonClicked, setIsButtonClicked] = useState(false);
 
    const buttonClasse = classNames(styles.cardProject_button, { [styles.cardProject_buttonClicked]: isButtonClicked });
 
+   // Gestion du style des bouttons au click
    const handleIsButtonClicked = () => {
       setIsButtonClicked(!isButtonClicked);
    };
 
+   // Gestion affchage des détails au click
    const handleToggleDetails = () => {
       setToggleDetails(!toggleDetails);
    };
@@ -25,11 +27,11 @@ const CardProject = ({ project }) => {
    });
 
    return (
-      <section className={`lg:w-5/6 lg:p-0 ${styles.cardProject_layout}`}>
+      <section className={`lg:w-5/6 lg:p-0 group ${styles.cardProject_layout}  ${bgColor}`}>
          <span className="lg:w-32 lg:ml-8">
             <h2 className="text-center mb-2 mt-2 uppercase">{project.name}</h2>
          </span>
-         <img src={`images/${project.thumbnail}`} alt={project.name} className={`lg:w-2/4 rounded my-5`} />
+         <img src={`images/${project.thumbnail}`} alt={project.name} className={`lg:w-2/4 rounded my-5 ${isButtonClicked ? "sepia-0" : "group-hover:sepia-0" } ${bgImageColor}`} />
          <button
             className={`${buttonClasse} lg:mr-8`}
             onClick={() => {
@@ -43,7 +45,7 @@ const CardProject = ({ project }) => {
                <animated.div style={infoAnimation}>
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                      <article className="lg:ml-28 lg:text-start pr-20 pl-9 lg:pl-16 ">
-                        <p className=" mt-5 italic text-wrap">{project.summary}</p>
+                        <p className=" mt-5 italic list-disc text-wrap">{project.summary}</p>
                         <p className=" mt-5 underline">Stack:</p>
                         <ul className="flex justify-start gap-4 flex-wrap pb-9 pt-4">
                            {project.technologies.map((tech) => (

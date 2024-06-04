@@ -8,8 +8,8 @@ function Projects() {
    const { data, loading, error } = useFetchData("/projects.json"); // Assurez-vous que le chemin est correct
    const [showLoading, setShowLoading] = useState(true);
    const animationDuration = 1200; // Durée de l'animation en millisecondes
-   const backgroundClasses = ["bg-neutral-900", "bg-neutral-700"];
-   const imageStyles = ["sepia"];
+   const backgroundClasses = ["bg-gray-900", "bg-gray-800"];
+   const imageStyles = ["sepia-0"];
 
    useEffect(() => {
       if (!loading) {
@@ -35,9 +35,9 @@ function Projects() {
    }
 
    return (
-      <div className={` ${styles.projects_layout} rounded lg:w-4/5 xl:ml-20  xl:mt-0`}>
-         <h1 className="text-2xl whitespace-normal break-after-column uppercase">Projets</h1>
-         <div className="h-2 bg-slate-300 mb-6 lg:my-4 rounded lg:w-5/6"></div>
+      <div className={` ${styles.projects_layout} rounded lg:w-4/5 xl:ml-20 xl:mt-0 2xl:w-3/4 transition-opacity`}>
+         <h1 className=" text-2xl whitespace-normal break-after-column uppercase text-5xl">Projets</h1>
+         <div className="h-2 bg-gray-700 mb-6 lg:my-4 rounded lg:w-5/6"></div>
          {data.projects.map((project, index) => {
             // Détermine la classe de background
             const bgColorClass = backgroundClasses[index % backgroundClasses.length];

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "../styles/CardProject.module.css";
 import classNames from "classnames";
 import { useSpring, animated } from "react-spring";
@@ -27,13 +28,15 @@ const CardProject = ({ project, bgColor, bgImageColor }) => {
    });
 
    return (
-      <section className={`lg:w-5/6 lg:p-0 group ${styles.cardProject_layout}  ${bgColor}`}>
+      <section className={`lg:w-5/6 lg:p-0 group mb-3 rounded  ${styles.cardProject_layout}  ${bgColor} `}>
          <span className="lg:w-32 lg:ml-8">
-            <h2 className="text-center mb-2 mt-2 uppercase">{project.name}</h2>
+            <Link to={project.url} target="_blank">
+               <h2 className="text-center mb-2 mt-2 uppercase underline text-green-300">{project.name}</h2>
+            </Link>
          </span>
-         <img src={`images/${project.thumbnail}`} alt={project.name} className={`lg:w-2/4 rounded my-5 ${isButtonClicked ? "sepia-0" : "group-hover:sepia-0" } ${bgImageColor}`} />
+         <img src={`images/${project.thumbnail}`} alt={project.name} className={`object-scale-down lg:w-2/4 rounded my-5 ${isButtonClicked ? "sepia-0 brightness-125" : "group-hover:sepia-0 group-hover:brightness-125"} ${bgImageColor}`} />
          <button
-            className={`${buttonClasse} lg:mr-8`}
+            className={`${buttonClasse} lg:mr-8 2xl:mr-16`}
             onClick={() => {
                handleToggleDetails(), handleIsButtonClicked();
             }}
@@ -44,7 +47,7 @@ const CardProject = ({ project, bgColor, bgImageColor }) => {
             {toggleDetails && (
                <animated.div style={infoAnimation}>
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                     <article className="lg:ml-28 lg:text-start pr-20 pl-9 lg:pl-16 ">
+                     <article className="lg:ml-28 lg:text-start pr-20 pl-9 lg:pl-16 xl:ml-32">
                         <p className=" mt-5 italic list-disc text-wrap">{project.summary}</p>
                         <p className=" mt-5 underline">Stack:</p>
                         <ul className="flex justify-start gap-4 flex-wrap pb-9 pt-4">

@@ -1,15 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
 .app_layout {
-  margin: 0px;
+   margin: 0px;
+   font-family: "Jost", sans-serif;
+   animation: fadeInAnimation ease 2s;
+   animation-iteration-count: 1;
+   animation-fill-mode: forwards;
 }
 
 
-
-@media (min-width: 1024px) { 
-  .app_layout {
-    display: flex;
-    justify-content: start;
-    padding-left: 50px;
-    background-color: #2B2B2B;
-    padding-left: 70px;
+@keyframes fadeInAnimation {
+  0% {
+     opacity: 0;
   }
- }
+  100% {
+     opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+   .app_layout {
+      display: flex;
+      justify-content: start;
+      padding-left: 50px;
+      background-color: #171717;
+      padding-left: 70px;
+   }
+}
+@media (min-width: 1536px) {
+   .app_layout {
+      background-color: #171717;
+      padding-left: 275px;
+   }
+}

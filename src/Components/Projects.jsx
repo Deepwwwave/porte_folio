@@ -7,9 +7,8 @@ import LoadingCircle from "./ui/loading-circle";
 function Projects() {
    const { data, loading, error } = useFetchData("/projects.json"); // Assurez-vous que le chemin est correct
    const [showLoading, setShowLoading] = useState(true);
-   const animationDuration = 1200; // Durée de l'animation en millisecondes
-   const backgroundClasses = ["bg-gray-900", "bg-gray-800"];
-   const imageStyles = ["sepia-0"];
+   const animationDuration = 1400; // Durée de l'animation en millisecondes
+   const backgroundClasses = ["bg-slate-800", "bg-slate-600"];
 
    useEffect(() => {
       if (!loading) {
@@ -35,21 +34,18 @@ function Projects() {
    }
 
    return (
-      <div className={` ${styles.projects_layout} rounded lg:w-4/5 xl:ml-20 xl:mt-0 2xl:w-3/4 transition-opacity`}>
-         <h1 className=" text-2xl whitespace-normal break-after-column uppercase text-5xl">Projets</h1>
-         <div className="h-2 bg-gray-700 mb-6 lg:my-4 rounded lg:w-5/6"></div>
+      <div className={` ${styles.projects_layout} lg:rounded lg:w-3/4 xl:ml-20 xl:mt-0 2xl:w-3/4 bg-transparent`}>
+         <h1 className=" text-2xl whitespace-normal break-after-column text-white uppercase text-5xl">Projets</h1>
+         <div className="h-2 bg-white my-4 lg:w-5/6"></div>
          {data.projects.map((project, index) => {
             // Détermine la classe de background
             const bgColorClass = backgroundClasses[index % backgroundClasses.length];
-            // Détermine le style d'image
-            const bgImageColorClass = imageStyles[index % imageStyles.length];
 
             return (
                <CardProject 
                   key={project.name} 
                   project={project} 
                   bgColor={bgColorClass} 
-                  bgImageColor={bgImageColorClass} 
                />
             );
          })}

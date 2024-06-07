@@ -6,22 +6,22 @@ export default function Navbar() {
   const location = useLocation();
 
   const checkPathName = (path) =>
-     path === location.pathname ? styles.navbar_linkActivated : styles.navbar_link;
+     path === location.pathname ? `${styles.navbar_linkActivated} shadow-md shadow-cyan-500/50 ` : styles.navbar_link;
 
   return (
-    <nav className={styles.navbar_layout}>
+    <nav className={`bg-transparent ${styles.navbar_layout} ` }>
       <ul className={styles.navbar_linksLayout}>
         <NavLink
           to="/"
           key="/"
-          className={`${checkPathName("/")} rounded `}
+          className={`${checkPathName("/")} rounded-xl `}
         >
-          <button>Moi</button>
+          <button>Profil</button>
         </NavLink>
         <NavLink
           to="projects"
           key="/projects"
-          className={`${checkPathName("/projects")} rounded `}
+          className={`${checkPathName("/projects")} rounded-xl `}
         >
           <button>Projets</button>
         </NavLink>

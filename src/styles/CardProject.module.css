@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    border: solid rgba(255, 255, 255, 0.2) 1px;;
     background-color: #232325;
     margin: 5px 0px 5px 0px;
     padding-bottom: 20px;
@@ -29,7 +29,7 @@
  .cardProject_buttonClicked {
   
   color:  #ffffff;
-  border:#bef264 1px solid
+  border:#0891b2 1px solid
  }
 
  .cardProject_buttonClose {

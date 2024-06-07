@@ -4,7 +4,7 @@
    justify-content: space-between;
    padding: 0px;
    width: content;
-   background-color: #171717;
+   background-color: transparent;
 }
 
 .navbar_link {
@@ -21,9 +21,9 @@
 }
 
 .navbar_linkActivated {
-   background-color:rgba(255, 255, 255, 0.2);
+   background-color: #2B2B2B;
    color: #FFFFFF;
-   border:#fdba74 1px solid;
+   border:#0891b2 1px solid;
    padding: 5px;
    margin: 5px;
    cursor: pointer;

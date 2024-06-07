@@ -5,7 +5,7 @@ const LoadingCircle = ({ duration, onComplete }) => {
 
 
   return (
-    <div className={`w-full m-auto lg:w-1/2 xl:ml-16 ${styles.loadingCircle}`}>
+    <div className={`w-full m-auto lg:w-1/2 xl:ml-16 bg-transparent ${styles.loadingCircle}`}>
       <svg className={`mt-6 ${styles.circle}`} viewBox="0 0 36 36">
         <path
           className={styles.circleBg}

@@ -3,8 +3,8 @@ import styles from "../styles/Me.module.css";
 
 export default function Me() {
    return (
-      <section className="flex justify-center items-center h-96 lg:w-4/5 xl:mt-0 2xl:w-3/4">
-         <div>Me</div>
+      <section className="flex justify-center items-center lg:w-3/4 xl:mt-0 2xl:w-3/4">
+         <div>Profil</div>
       </section>
    );
 }

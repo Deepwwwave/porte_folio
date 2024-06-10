@@ -81,7 +81,7 @@
                },
                {
                   "title": "Sécurité",
-                  "value": "token, bcrypt, ratelimit, mot de passe robuste"
+                  "value": "token, bcrypt, ratelimit"
                },
                {
                   "title": "Synchronisation des données",

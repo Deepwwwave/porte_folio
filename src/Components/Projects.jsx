@@ -35,7 +35,7 @@ function Projects() {
 
    return (
       <div className={` ${styles.projects_layout} lg:rounded lg:w-3/4 xl:ml-20 2xl:w-3/4 bg-transparent`}>
-         <h1 className=" text-2xl whitespace-normal break-after-column text-white uppercase text-5xl">Projets</h1>
+         <h1 className=" text-4xl xl:text-5xl whitespace-normal break-after-column text-white uppercase">Projets</h1>
          <div className="h-2 bg-white my-4 lg:w-5/6"></div>
          {data.projects.map((project, index) => {
             // Détermine la classe de background

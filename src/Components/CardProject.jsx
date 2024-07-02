@@ -30,13 +30,11 @@ const CardProject = ({ project, bgColor }) => {
    return (
       <section className={`lg:w-5/6 lg:p-0 group mb-3 rounded hover:saturate-150 ${styles.cardProject_layout}  ${bgColor} ${isButtonClicked ? "saturate-150" : "hover:saturate-150"}`}>
          <span className="lg:w-32 lg:ml-8">
-            <Link to={project.url} target="_blank">
-               <h2 className="text-center mb-2 mt-2 uppercase underline text-white-600 ">{project.name}</h2>
-            </Link>
+               <h2 className="text-center mb-2 mt-2 uppercase text-white-600 ">{project.name}</h2>
          </span>
-
-         <img src={`images/${project.thumbnail}`} alt={project.name} className={`object-scale-down  lg:w-2/4 rounded my-5 `} />
-
+         <Link to={project.url} target="_blank" className="lg:w-2/4">
+         <img src={`images/${project.thumbnail}`} alt={project.name} className={`object-scale-down rounded my-5 `} />
+         </Link>
          <button
             className={`${buttonClasse} lg:mr-4 2xl:mr-16`}
             onClick={() => {

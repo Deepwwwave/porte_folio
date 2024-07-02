@@ -26,7 +26,7 @@ function Projects() {
    }
 
    if (error) {
-      return <div>Error: {error.message}</div>;
+      return <div>Error: {error.message}</div>
    }
 
    if (!data || !data.projects || !Array.isArray(data.projects)) {
@@ -41,13 +41,7 @@ function Projects() {
             // Détermine la classe de background
             const bgColorClass = backgroundClasses[index % backgroundClasses.length];
 
-            return (
-               <CardProject 
-                  key={project.name} 
-                  project={project} 
-                  bgColor={bgColorClass} 
-               />
-            );
+            return <CardProject key={project.name} project={project} bgColor={bgColorClass} />;
          })}
       </div>
    );

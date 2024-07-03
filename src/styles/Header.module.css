@@ -8,8 +8,8 @@
 }
 
 .header_photo{
-  width: 33%;
-  height: 33%;
+  width: 40%;
+  height: 40%;
   border:  solid 1px ;
   border-image: conic-gradient(#0891b2 0% 50%, #FFFFFF 50% 100%) 1;
   border-radius: 50px;

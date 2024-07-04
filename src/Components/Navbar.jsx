@@ -6,10 +6,10 @@ export default function Navbar() {
   const location = useLocation();
 
   const checkPathName = (path) =>
-     path === location.pathname ? `${styles.navbar_linkActivated} shadow-md shadow-cyan-500/50 ` : styles.navbar_link;
+     path === location.pathname ? `${styles.navbar_linkActivated} shadow-md shadow-cyan-500/30 ` : styles.navbar_link;
 
   return (
-    <nav className={`bg-transparent ${styles.navbar_layout} ` }>
+    <nav className={`bg-transparent ${styles.navbar_layout} `}>
       <ul className={styles.navbar_linksLayout}>
         <NavLink
           to="/"

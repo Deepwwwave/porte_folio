@@ -47,7 +47,7 @@ const CardProject = ({ project, bgColor }) => {
             {toggleDetails && (
                <animated.div style={infoAnimation}>
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                     <article className="lg:ml-28 lg:text-start pr-20 pl-9 lg:pl-16 xl:ml-52">
+                     <article className="lg:ml-28 lg:text-start pr-20 pl-9 lg:pl-16 xl:ml-52 lg:text-lg">
                         <p className=" mt-5 italic list-disc text-wrap">{project.summary}</p>
                         <p className=" mt-5 underline">Stack:</p>
                         <ul className="flex justify-start gap-4 flex-wrap pb-9 pt-4">
@@ -59,7 +59,7 @@ const CardProject = ({ project, bgColor }) => {
                            ))}
                         </ul>
                         {project.description.Front && (
-                           <div>
+                           <div >
                               <h3 className=" underline">Front-end:</h3>
                               {project.description.Front.map((detail) => (
                                  <p className=" text-wrap" key={detail.title}>

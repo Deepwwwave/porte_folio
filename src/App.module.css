@@ -31,5 +31,6 @@
    .app_layout {
       background-color: #09090b;
       padding-left: 275px;
+      padding-right:150px;
    }
 }

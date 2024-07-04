@@ -34,7 +34,7 @@ const TechnologyImages = ({ url, exceptions = [] }) => {
          </div>
          <div className="tech-images flex flex-wrap justify-center mb-8 px-12 max-w-96 lg:max-w-md">
             {techImages.map((image, index) => (
-               <img key={index} src={`portfolio/images/${image}`} alt={`Technology ${index}`} className="w-10 m-2 " />
+               <img key={index} src={`images/${image}`} alt={`Technology ${index}`} className="w-10 m-2 " />
             ))}
          </div>
       </>

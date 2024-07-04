@@ -53,7 +53,7 @@ const CardProject = ({ project, bgColor }) => {
                         <ul className="flex justify-start gap-4 flex-wrap pb-9 pt-4">
                            {project.technologies.map((tech) => (
                               <li key={tech.name} className="flex flex-col items-center">
-                                 <img src={`images/${tech.image}`} alt={tech.name} className="w-10" />
+                                 <img src={`portfolio/images/${tech.image}`} alt={tech.name} className="w-10" />
                                  {tech.name}
                               </li>
                            ))}

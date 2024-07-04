@@ -42,7 +42,7 @@ const TechnologyImages = ({ url, exceptions = [] }) => {
 };
 
 export default function Profil() {
-   const url = "/projects.json";
+   const url = "/portfolio/projects.json";
    const exceptions = ["angular-logo.png", "bootstrap-logo.png", "bootstrap", "angular"];
 
    return (

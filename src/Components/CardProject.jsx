@@ -33,7 +33,7 @@ const CardProject = ({ project, bgColor }) => {
                <h2 className="text-center mb-2 mt-2 uppercase text-white-600 ">{project.name}</h2>
          </span>
          <Link to={project.url} target="_blank" className="lg:w-2/4">
-         <img src={`images/${project.thumbnail}`} alt={project.name} className={`object-scale-down rounded my-5 `} />
+         <img src={`/portfolio/images/${project.thumbnail}`} alt={project.name} className={`object-scale-down rounded my-5 `} />
          </Link>
          <button
             className={`${buttonClasse} lg:mr-4 2xl:mr-16`}

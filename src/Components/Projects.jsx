@@ -5,7 +5,7 @@ import CardProject from "./CardProject";
 import LoadingCircle from "./ui/loading-circle";
 
 function Projects() {
-   const { data, loading, error } = useFetchData("/projects.json"); // Assurez-vous que le chemin est correct
+   const { data, loading, error } = useFetchData("/portfolio/projects.json"); // Assurez-vous que le chemin est correct
    const [showLoading, setShowLoading] = useState(true);
    const animationDuration = 1400; // Durée de l'animation en millisecondes
    const backgroundClasses = ["bg-slate-800", "bg-slate-600"];

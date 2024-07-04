@@ -12,15 +12,15 @@ export default function Navbar() {
     <nav className={`bg-transparent ${styles.navbar_layout} `}>
       <ul className={styles.navbar_linksLayout}>
         <NavLink
-          to="/"
-          key="/"
-          className={`${checkPathName("/")} rounded-xl `}
+          to="/portfolio/"
+          key="portfolio"
+          className={`${checkPathName("/portfolio/")} rounded-xl `}
         >
           <button>Profil</button>
         </NavLink>
         <NavLink
           to="projects"
-          key="/projects"
+          key="projects"
           className={`${checkPathName("/projects")} rounded-xl `}
         >
           <button>Projets</button>

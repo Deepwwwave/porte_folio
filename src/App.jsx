@@ -14,8 +14,8 @@ function App() {
       <div className={`${styles.app_layout} bg-gradient-to-r from-gray-900  to-zinc-900`}>
          <Header />
          <Routes>
-            <Route index path="/" element={<Profil />} />
-            <Route path="/Projects" element={<Projects />} />
+            <Route index path="/portfolio/" element={<Profil />} />
+            <Route path="/projects" element={<Projects />} />
          </Routes>
       </div>
    );

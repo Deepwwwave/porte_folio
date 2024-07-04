@@ -13,6 +13,7 @@
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.6",
+    "gh-pages": "^6.1.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
@@ -22,7 +23,7 @@
     "react-router-dom": "^6.22.3",
     "react-spring": "^9.7.3",
     "react-typed": "^2.0.12",
-    "sort-by": "^1.2.0",
+    "sort-by": "^0.0.2",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {

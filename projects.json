@@ -2,7 +2,7 @@
    "projects": [
       {
          "name": "Boutique en ligne",
-         "url": "ball-shop.vercel.app",
+         "url": "https://ball-shop.vercel.app",
          "thumbnail": "ball_shop-thumbnail.png",
          "technologies": [
             {

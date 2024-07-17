@@ -4,6 +4,7 @@ import styles from "../styles/CardProject.module.css";
 import classNames from "classnames";
 import { useSpring, animated } from "react-spring";
 import { motion, AnimatePresence } from "framer-motion";
+import ImageLoader from './ImageLoader';
 
 const CardProject = ({ project, bgColor }) => {
    const [toggleDetails, setToggleDetails] = useState(false);
@@ -33,7 +34,11 @@ const CardProject = ({ project, bgColor }) => {
                <h2 className="text-center mb-2 mt-2 uppercase text-white-600 ">{project.name}</h2>
          </span>
          <Link to={project.url} target="_blank" className="lg:w-2/4">
-         <img src={`/portfolio/images/${project.thumbnail}`} alt={project.name} className={`object-scale-down rounded my-5 `} />
+         <ImageLoader
+        src={`/portfolio/images/${project.thumbnail}`}
+        alt={project.name}
+        className="object-scale-down rounded my-5"
+      />
          </Link>
          <button
             className={`${buttonClasse} lg:mr-4 2xl:mr-16`}
@@ -47,13 +52,13 @@ const CardProject = ({ project, bgColor }) => {
             {toggleDetails && (
                <animated.div style={infoAnimation}>
                   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                     <article className="lg:ml-28 lg:text-start pr-20 pl-9 lg:pl-16 xl:ml-52 lg:text-lg">
+                     <article className="lg:ml-28 lg:text-start xl:pr-40 pr-12 pl-9 lg:pl-16 xl:ml-40 lg:text-lg">
                         <p className=" mt-5 italic list-disc text-wrap">{project.summary}</p>
                         <p className=" mt-5 underline">Stack:</p>
                         <ul className="flex justify-start gap-4 flex-wrap pb-9 pt-4">
                            {project.technologies.map((tech) => (
                               <li key={tech.name} className="flex flex-col items-center">
-                                 <img src={`portfolio/images/${tech.image}`} alt={tech.name} className="w-10" />
+                                 <img src={`images/${tech.image}`} alt={tech.name} className="w-10" />
                                  {tech.name}
                               </li>
                            ))}

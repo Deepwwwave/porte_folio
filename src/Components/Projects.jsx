@@ -34,7 +34,7 @@ function Projects() {
    }
 
    return (
-      <div className={` ${styles.projects_layout} lg:rounded lg:w-3/4 xl:ml-10  xl:pr-32 2xl:w-3/4 bg-transparent `}>
+      <div className={` ${styles.projects_layout} lg:rounded lg:w-3/4 xl:ml-24  xl:pr-32 2xl:w-3/4 bg-transparent min-h-screen`}>
          <h1 className=" text-4xl xl:text-5xl  whitespace-normal break-after-column text-white uppercase">Projets</h1>
          <div className="h-2 bg-white my-4 lg:w-5/6"></div>
          {data.projects.map((project, index) => {

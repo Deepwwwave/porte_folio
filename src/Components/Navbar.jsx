@@ -9,19 +9,19 @@ export default function Navbar() {
      path === location.pathname ? `${styles.navbar_linkActivated} shadow-md shadow-cyan-500/30 ` : styles.navbar_link;
 
   return (
-    <nav className={`bg-transparent ${styles.navbar_layout} `}>
+    <nav className={`bg-transparent ${styles.navbar_layout} text-xl`}>
       <ul className={styles.navbar_linksLayout}>
         <NavLink
           to="/portfolio/"
           key="portfolio"
-          className={`${checkPathName("/portfolio/")} rounded-xl `}
+          className={`${checkPathName("/portfolio/")} rounded-full `}
         >
           <button>Profil</button>
         </NavLink>
         <NavLink
-          to="projects"
+          to="/portfolio/projects"
           key="projects"
-          className={`${checkPathName("/projects")} rounded-xl `}
+          className={`${checkPathName("/portfolio/projects")} rounded-full `}
         >
           <button>Projets</button>
         </NavLink>

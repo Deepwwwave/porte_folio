@@ -102,30 +102,6 @@
          }
       },
       {
-         "name": "Watch dasboard",
-         "url": "https://lulutor.github.io/Shop.org-AngulatJS-/",
-         "thumbnail": "dashbord-thumbnail.png",
-         "technologies": [
-            {
-               "name": "Angular",
-               "image": "angular-logo.png"
-            },
-            {
-               "name": "Material CSS",
-               "image": "material-logo.png"
-            }
-         ],
-         "summary": "Dashbord pour e-commerce.",
-         "description": {
-            "Front": [
-               {
-                  "title": "Interface",
-                  "value": "ng-module"
-               }  
-            ]
-         }
-      },
-      {
          "name": "Filmothèque",
          "url": "https://deepwwwave.github.io/filmotheque_requete_ajax/",
          "thumbnail": "filmotheque-thumbnail.png",
@@ -182,6 +158,30 @@
                {
                   "title": "Animation",
                   "value": "animate.css"
+               }  
+            ]
+         }
+      },
+      {
+         "name": "Watch dasboard",
+         "url": "https://lulutor.github.io/Shop.org-AngulatJS-/",
+         "thumbnail": "dashbord-thumbnail.png",
+         "technologies": [
+            {
+               "name": "Angular",
+               "image": "angular-logo.png"
+            },
+            {
+               "name": "Material CSS",
+               "image": "material-logo.png"
+            }
+         ],
+         "summary": "Dashbord pour e-commerce.",
+         "description": {
+            "Front": [
+               {
+                  "title": "Interface",
+                  "value": "ng-module"
                }  
             ]
          }
